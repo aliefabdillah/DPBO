@@ -36,7 +36,7 @@ public class Tabel {
         //membuat baris isi
         for (int i = 0; i < isi.length; i++) {
             System.out.print("| ");
-            System.out.print(isi[i]);
+            System.out.print(isi[i]) ;
             for (int j = 0; j < (add - 3); j++) {
                 System.out.print(" ");
             }

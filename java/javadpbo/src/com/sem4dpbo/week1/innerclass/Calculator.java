@@ -17,7 +17,7 @@ public class Calculator {
     }
 
     //inner class operasi
-    class Operasi {
+    static class Operasi {
         Operasi() {
         }
 

@@ -1,7 +1,7 @@
-using namespace std;
 #include "Aset.cpp"
 #include "Bangunan.cpp"
 #include "Gudang.cpp"
+using namespace std;
 
 int main()
 {

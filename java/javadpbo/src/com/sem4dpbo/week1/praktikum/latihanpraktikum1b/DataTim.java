@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class DataTim {
     private String nama, negara, kota, kandang, tahunBerdiri, pemain;
-//    private static int m;
-    static Scanner scan = new Scanner(System.in);
-
+    private int nomorPunggung;
     //constructor
     public DataTim(
-            String nama, String negara, String kota, String kandang, String tahunBerdiri, String pemain)
+            String nama, String negara, String kota, String kandang, String tahunBerdiri, String pemain,
+            int nomorPunggung)
     {
         this.nama = nama;
         this.negara = negara;
@@ -17,6 +16,7 @@ public class DataTim {
         this.kandang = kandang;
         this.tahunBerdiri = tahunBerdiri;
         this.pemain = pemain;
+        this.nomorPunggung = nomorPunggung;
     }
 
     //method setter
@@ -29,6 +29,12 @@ public class DataTim {
     public void setKandang(String kandang) {this.kandang = kandang;}
 
     public void setTahunBerdiri(String tahunBerdiri) {this.tahunBerdiri = tahunBerdiri;}
+
+    public void setPemain(String pemain) { this.pemain = pemain; }
+
+    public void setNomorPunggung(int nomorPunggung) {
+        this.nomorPunggung = nomorPunggung;
+    }
 
     //method getter
     public String getNama() { return nama; }
@@ -43,8 +49,7 @@ public class DataTim {
 
     public String getPemain() { return pemain; }
 
-    //membuat array atribut pemain dari objek
-    public static void buatDanPrintArrayPemain(DataTim[] arrDataTim, int n) {
-
+    public int getNomorPunggung() {
+        return nomorPunggung;
     }
 }

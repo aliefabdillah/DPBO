@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class MainDataTim {
     public static void main(String[] args) {
-        int i = 0, j = 0;
-        int n = 0;
+        int i, j;
+        int n = 0, m = 0;
         Scanner scan = new Scanner(System.in);
 
         //input jumlah data dari user
         try {
-            System.out.print("Masukan Jumlah Data Tim:");
+            System.out.print("Masukan Jumlah Data Tim: ");
             n = scan.nextInt();
         } catch (Exception e) {
         }
@@ -19,11 +19,11 @@ public class MainDataTim {
         String nama = null, negara = null, kota = null, kandang = null, tahunBerdiri = null;
 
 //        objek array data tim
-        DataTim[] arrDataTim = new DataTim[n];
+        DataTim[] arrData = new DataTim[0];
         //masukan datatim
         for (i = 0; i < n; i++) {
             try {
-                System.out.println("Masukan Nama, Negara, Kota, Kandang, dan Tahun Berdiri Tim:");
+                System.out.println("Masukan Nama, Negara, Kota, Kandang, dan Tahun Berdiri Tim ke-"+(i+1)+":");
                 nama = scan.next();
                 negara = scan.next();
                 kota = scan.next();
@@ -32,60 +32,47 @@ public class MainDataTim {
             } catch (Exception e) {
             }
 
-//            arrDataTim[i] = new DataTim(nama, negara, kota, kandang, tahunBerdiri);
-        }
+            System.out.print("Masukan Jumlah Pemain Tim "+ nama +": ");
+            try {
+                m = scan.nextInt();
+            } catch (Exception e) {
+            }
 
-        //deklarasi objek array data pemain
-//        DataTim[] dataPemain;
-//        DataTim.buatDanPrintArrayPemain(arrDataTim, n);
-
-        //print data tim
-        Tabel tabelTim = new Tabel(n, 5);
-        for (i = 0; i < n; i++) {
-            String[] arrDataTimStr = new String[5];
-            //memasukan data yang ada pada object ke dalam array of string
-            arrDataTimStr[0] = arrDataTim[i].getNama();
-            arrDataTimStr[1] = arrDataTim[i].getNegara();
-            arrDataTimStr[2] = arrDataTim[i].getKota();
-            arrDataTimStr[3] = arrDataTim[i].getKandang();
-            arrDataTimStr[4] = arrDataTim[i].getTahunBerdiri();
-            tabelTim.buatBaris(arrDataTimStr, 5);               //membuat tabel
-        }
-
-        int m = 0;
-        System.out.print("Masukan Jumlah Pemain Tim :");
-        try {
-            m = scan.nextInt();
-        } catch (Exception e) {
-        }
-
-        DataTim[] pemain = new DataTim[m];
-        for (i = 0; i < n; i++) {
-            //masukan jumlah pemain dari tim
             String namaPemain = null;
-            //masukan nama pemain
+            int nomor = 0;
+            arrData = new DataTim[m];
             for (j = 0; j < m; j++) {
                 try {
-                    System.out.print("Masukan Nama Pemain ke-" + (j + 1) + ": ");
+                    System.out.print("Masukan Nama dan Nomor Punggung Pemain ke-" + (j + 1) + ": ");
                     namaPemain = scan.next();
+                    nomor = scan.nextInt();
                 } catch (Exception e) {
                 }
 
-//                pemain[i] = new DataTim(namaPemain);
+                arrData[j] = new DataTim(nama, negara, kota, kandang, tahunBerdiri, namaPemain, nomor);
+            }
+
+            //print data tim
+            Tabel tabelTim = new Tabel(n, 4);
+            System.out.println("Klub No."+(i+1)+":");
+            String[] arrDataTimStr = new String[5];
+            //memasukan data yang ada pada object ke dalam array of string
+            arrDataTimStr[0] = arrData[i].getNama();
+            arrDataTimStr[1] = arrData[i].getNegara();
+            arrDataTimStr[2] = arrData[i].getKota();
+            arrDataTimStr[3] = arrData[i].getKandang();
+            arrDataTimStr[4] = arrData[i].getTahunBerdiri();
+            tabelTim.buatBaris(arrDataTimStr, 4);               //membuat tabel
+
+            //print daftar pemain
+            System.out.println("Daftar Pemain:");
+            Tabel tabelPemain = new Tabel(m, 4);
+            for (int l = 0; l < m; l++) {
+                String[] arrDataPemainStr = new String[2];
+                arrDataPemainStr[0] = arrData[l].getPemain();
+                arrDataPemainStr[1] = "" + arrData[l].getNomorPunggung();
+                tabelPemain.buatBaris(arrDataPemainStr, 4);
             }
         }
-
-        for (int k = 0; k < m; k++) {
-            System.out.println(pemain[i]);
-        }
-
-//        System.out.println("Daftar Pemain:");
-//        Tabel tabelPemain = new Tabel(m, 1);
-//        for (i = 0; i < m; i++) {
-//            String[] arrDataPemainStr = new String[1];
-//            arrDataPemainStr[0] = pemain[i].getPemain();
-//            tabelPemain.buatBaris(arrDataPemainStr, 1);
-//        }
     }
-
 }

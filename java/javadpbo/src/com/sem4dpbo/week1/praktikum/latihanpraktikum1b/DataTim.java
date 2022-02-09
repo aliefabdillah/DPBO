@@ -1,8 +1,7 @@
 package com.sem4dpbo.week1.praktikum.latihanpraktikum1b;
 
-import java.util.Scanner;
-
 public class DataTim {
+    //atribut untuk menampung data
     private String nama, negara, kota, kandang, tahunBerdiri, pemain;
     private int nomorPunggung;
     //constructor
@@ -32,9 +31,7 @@ public class DataTim {
 
     public void setPemain(String pemain) { this.pemain = pemain; }
 
-    public void setNomorPunggung(int nomorPunggung) {
-        this.nomorPunggung = nomorPunggung;
-    }
+    public void setNomorPunggung(int nomorPunggung) {this.nomorPunggung = nomorPunggung;}
 
     //method getter
     public String getNama() { return nama; }
@@ -49,7 +46,5 @@ public class DataTim {
 
     public String getPemain() { return pemain; }
 
-    public int getNomorPunggung() {
-        return nomorPunggung;
-    }
+    public int getNomorPunggung() {return nomorPunggung;}
 }

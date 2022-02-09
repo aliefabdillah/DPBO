@@ -20,8 +20,9 @@ public class MainDataTim {
 
 //        objek array data tim
         DataTim[] arrData = new DataTim[0];
-        //masukan datatim
+
         for (i = 0; i < n; i++) {
+            //masukan data
             try {
                 System.out.println("Masukan Nama, Negara, Kota, Kandang, dan Tahun Berdiri Tim ke-"+(i+1)+":");
                 nama = scan.next();
@@ -32,15 +33,17 @@ public class MainDataTim {
             } catch (Exception e) {
             }
 
+            //masukan jumlah pemain
             System.out.print("Masukan Jumlah Pemain Tim "+ nama +": ");
             try {
                 m = scan.nextInt();
             } catch (Exception e) {
             }
 
+            //masukan nama dan nomor punggung pemain
             String namaPemain = null;
             int nomor = 0;
-            arrData = new DataTim[m];
+            arrData = new DataTim[m];           //deklarasi array dari class DataTim dengan panjang m
             for (j = 0; j < m; j++) {
                 try {
                     System.out.print("Masukan Nama dan Nomor Punggung Pemain ke-" + (j + 1) + ": ");
@@ -49,6 +52,7 @@ public class MainDataTim {
                 } catch (Exception e) {
                 }
 
+                //memasukan data masukan ke dalam objek
                 arrData[j] = new DataTim(nama, negara, kota, kandang, tahunBerdiri, namaPemain, nomor);
             }
 

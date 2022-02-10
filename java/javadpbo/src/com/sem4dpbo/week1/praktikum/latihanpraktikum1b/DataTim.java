@@ -47,4 +47,5 @@ public class DataTim {
     public String getPemain() { return pemain; }
 
     public int getNomorPunggung() {return nomorPunggung;}
+
 }

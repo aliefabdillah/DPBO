@@ -1,4 +1,4 @@
-package com.sem4dpbo.week1.praktikum.latihanpraktikum1b;
+package com.sem4dpbo.week1.praktikum.latihanpraktikum1b_java;
 
 public class Tabel {
     private int baris, kolom;

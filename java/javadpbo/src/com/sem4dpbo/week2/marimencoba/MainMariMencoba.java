@@ -38,6 +38,7 @@ public class MainMariMencoba {
                 kota = scan.next();
 
                 //memasukan data ke dalam object
+                industriKuliner[i] = new IndustriKuliner();
                 industriKuliner[i].setNoIjin(noIjin);
                 industriKuliner[i].setNamaPemilik(namaPemilik);
                 industriKuliner[i].setNoIjin(kota);
@@ -53,6 +54,7 @@ public class MainMariMencoba {
                 kodeRestoran = scan.next();
 
                 //memasukan data ke dalam object
+                pengusahaRestoran[i] = new PengusahaRestoran();
                 pengusahaRestoran[i].setNamaRestoran(namaRestoran);
                 pengusahaRestoran[i].setKodeRestoran(kodeRestoran);
             }catch (Exception e){}
@@ -66,6 +68,7 @@ public class MainMariMencoba {
                 pangsaPasar = scan.next();
 
                 //memasukan data input ke dalam object
+                restoran[i] = new Restoran();
                 restoran[i].setJenisRestoran(jenis);
                 restoran[i].setPangsaPasar(pangsaPasar);
             }catch (Exception e){}
@@ -91,6 +94,7 @@ public class MainMariMencoba {
                     bahanLokal = scan.next();
                     deskripsiBahanLokal = scan.next();
 
+                    masakanIndonesia[j] = new MasakanIndonesia();
                     masakanIndonesia[j].setKodeMasakan(kodeLokal);
                     masakanIndonesia[j].setNama(namaLokal);
                     masakanIndonesia[j].setHarga(hargaLokal);
@@ -102,6 +106,7 @@ public class MainMariMencoba {
                     if (bahanLokal.equalsIgnoreCase("Ikan")){
                         String jenisIkan;
                         jenisIkan = scan.next();
+                        bahanIkanLokal[j] = new BahanIkan();
                         bahanIkanLokal[j].setJenisIkan(jenisIkan);
                     }
                 }catch (Exception e){}
@@ -128,6 +133,7 @@ public class MainMariMencoba {
                     bahanAsing = scan.next();
                     deskripsiBahanAsing = scan.next();
 
+                    masakanAsing[j] = new MasakanAsing();
                     masakanAsing[j].setKodeMasakan(kodeAsing);
                     masakanAsing[j].setNama(namaAsing);
                     masakanAsing[j].setHarga(hargaAsing);
@@ -139,6 +145,7 @@ public class MainMariMencoba {
                     if (bahanAsing.equalsIgnoreCase("Ikan")){
                         String jenisIkan;
                         jenisIkan = scan.next();
+                        bahanIkanAsing[j] = new BahanIkan();
                         bahanIkanAsing[j].setJenisIkan(jenisIkan);
                     }
                 }catch (Exception e){}

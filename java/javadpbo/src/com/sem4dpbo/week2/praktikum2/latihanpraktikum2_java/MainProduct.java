@@ -17,8 +17,6 @@ public class MainProduct {
             n = scan.nextInt();
         }catch (Exception e){}
 
-//        Product[] dataProduct = new Product[n];      //deklarasi obcet dari class Memory
-//        Hardware[] dataProduct2 = new Hardware[n];      //deklarasi obcet dari class Memory
         Memory[] dataProduct3 = new Memory[n];          //deklarasi obcet dari class Memory
 
 //        masukan data
@@ -43,10 +41,6 @@ public class MainProduct {
 
             }catch (Exception e){}
                 //memasukan data ke dalam object
-//            dataProduct[i] = new Product(price, idProduct);
-//            dataProduct2[i] = new Hardware(brand, model);
-//            dataProduct3[i] = new Memory(frequency, memorySize, supportCuda);
-//            dataProduct3[i] = new Memory(idProduct, price, brand, model, frequency, memorySize, supportCuda);
             dataProduct3[i] = new Memory();
             dataProduct3[i].setIdProduct(idProduct);
             dataProduct3[i].setPrice(price);

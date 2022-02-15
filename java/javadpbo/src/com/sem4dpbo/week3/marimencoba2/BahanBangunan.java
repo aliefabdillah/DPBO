@@ -1,7 +1,7 @@
 package com.sem4dpbo.week3.marimencoba2;
 
 public class BahanBangunan {
-    private String kodeBahan, kategoriJenisBahan;
+    private String kodeBahan, kategoriJenisBahan, kualitas, harga;          //properties kualitas dan harga dari atribut semen dan genteng naik ke parent class
 
 //    constructor
     BahanBangunan(){}
@@ -23,4 +23,19 @@ public class BahanBangunan {
         this.kategoriJenisBahan = kategoriJenisBahan;
     }
 
+    public String getKualitas() {
+        return kualitas;
+    }
+
+    public void setKualitas(String kualitas) {
+        this.kualitas = kualitas;
+    }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
 }

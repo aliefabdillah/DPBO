@@ -1,7 +1,7 @@
 package com.sem4dpbo.week3.marimencoba2;
 
-public class PenjualBahanBangunan extends TokoBangunan{
-    private String noKtp, namaPenjual;
+public class PenjualBahanBangunan {
+    private String noKtp, namaPenjual, NamaToko, alamatToko;
 
 //    constructor
     public PenjualBahanBangunan(){}
@@ -21,5 +21,21 @@ public class PenjualBahanBangunan extends TokoBangunan{
 
     public void setNamaPenjual(String namaPenjual) {
         this.namaPenjual = namaPenjual;
+    }
+
+    public String getNamaToko() {
+        return NamaToko;
+    }
+
+    public void setNamaToko(String namaToko) {
+        NamaToko = namaToko;
+    }
+
+    public String getAlamatToko() {
+        return alamatToko;
+    }
+
+    public void setAlamatToko(String alamatToko) {
+        this.alamatToko = alamatToko;
     }
 }

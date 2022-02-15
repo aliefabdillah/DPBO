@@ -1,7 +1,7 @@
 package com.sem4dpbo.week3.marimencoba2;
 
 public class Semen extends BahanBangunan{
-    private String namaSemen, kodePabrik, kualitas, harga;
+    private String namaSemen, kodePabrik;
 
 //    constructor
     public Semen(){}
@@ -22,21 +22,4 @@ public class Semen extends BahanBangunan{
     public void setKodePabrik(String kodePabrik) {
         this.kodePabrik = kodePabrik;
     }
-
-    public String getKualitas() {
-        return kualitas;
-    }
-
-    public void setKualitas(String kualitas) {
-        this.kualitas = kualitas;
-    }
-
-    public String getHarga() {
-        return harga;
-    }
-
-    public void setHarga(String harga) {
-        this.harga = harga;
-    }
-
 }

@@ -10,24 +10,26 @@ public class MainBangunan {
         dataArsitek.setKantor("Podomoro Group");
         dataArsitek.setTahunBekerja("2021");
 
-//        TokoBangunan dataToko = new TokoBangunan();     //instansiasi object data toko menggunakan class Toko
+        TokoBangunan dataToko = new TokoBangunan();     //instansiasi object data toko menggunakan class Toko
+        dataToko.setKodeToko("TK01");
+        dataToko.setNamaToko("PD Sumber Makmur");
+        dataToko.setAlamatToko("Jalan Setiabudi");
 
-        //memasukan data ke dalam objcet dataPenjual memakai inheritance
-
+        //memasukan data ke dalam objcet dataPenjual
         PenjualBahanBangunan dataPenjual = new PenjualBahanBangunan();       //instansiasi class penjual bahan Bangunan
-        dataPenjual.setKodeToko("TK01");
+        dataPenjual.setNoKtp("3204280012");
+        dataPenjual.setNamaPenjual("Hj. Asep");
         dataPenjual.setNamaToko("PD Sumber Makmur");
         dataPenjual.setAlamatToko("Jalan Setiabudi");
-        dataPenjual.setNamaPenjual("Hj. Asep");
-        dataPenjual.setNoKtp("3204280012");
 
+        // memasukan data ke dalam object data semen
         Semen dataSemen = new Semen();
         dataSemen.setKodeBahan("SMN01");
         dataSemen.setKategoriJenisBahan("Semen");
         dataSemen.setNamaSemen("Semen Tiga Roda");
         dataSemen.setKodePabrik("PB001");
-        dataSemen.setKualitas("Sangat Baik");
-        dataSemen.setHarga("40K/sak");
+        dataSemen.setKualitas("Sangat Baik");       //call method setKualitas dari parent class dataSemen, yaitu class bahanBangunan
+        dataSemen.setHarga("40K/sak");          //call method setHarga dari parent class dataSemen, yaitu class bahanBangunan
 
         Genteng dataGenteng = new Genteng();
         dataGenteng.setKodeBahan("GNT01");
@@ -49,17 +51,16 @@ public class MainBangunan {
         System.out.println("---------------");
         System.out.println("Toko Bangunan");
         System.out.println("---------------");
-        System.out.println("Kode Toko: "+dataPenjual.getKodeToko());
-        System.out.println("Nama Toko: "+dataPenjual.getNamaToko());
-        System.out.println("Alamat Toko: "+dataPenjual.getAlamatToko());
+        System.out.println("Kode Toko: "+dataToko.getKodeToko());
+        System.out.println("Nama Toko: "+dataToko.getNamaToko());
+        System.out.println("Alamat Toko: "+dataToko.getAlamatToko());
         System.out.println("---------------");
         System.out.println("Penjual Bahan Bangunan");
         System.out.println("---------------");
-        System.out.println("Kode Toko: "+dataPenjual.getKodeToko());
+        System.out.println("No KTP: "+dataPenjual.getNoKtp());
+        System.out.println("Nama Penjual: "+dataPenjual.getNamaPenjual());
         System.out.println("Nama Toko: "+dataPenjual.getNamaToko());
         System.out.println("Alamat Toko: "+dataPenjual.getAlamatToko());
-        System.out.println("Nama Penjual: "+dataPenjual.getNamaPenjual());
-        System.out.println("No KTP: "+dataPenjual.getNoKtp());
         System.out.println("---------------");
         System.out.println("Bahan Bangunan");
         System.out.println("---------------");

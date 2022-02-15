@@ -1,7 +1,7 @@
 package com.sem4dpbo.week3.marimencoba2;
 
 public class Genteng extends BahanBangunan{
-    private String namaGenteng, kodePabrik, kualitas, harga;
+    private String namaGenteng, kodePabrik;
 
 //    constrcutor
     public Genteng(){}
@@ -21,21 +21,5 @@ public class Genteng extends BahanBangunan{
 
     public void setKodePabrik(String kodePabrik) {
         this.kodePabrik = kodePabrik;
-    }
-
-    public String getKualitas() {
-        return kualitas;
-    }
-
-    public void setKualitas(String kualitas) {
-        this.kualitas = kualitas;
-    }
-
-    public String getHarga() {
-        return harga;
-    }
-
-    public void setHarga(String harga) {
-        this.harga = harga;
     }
 }

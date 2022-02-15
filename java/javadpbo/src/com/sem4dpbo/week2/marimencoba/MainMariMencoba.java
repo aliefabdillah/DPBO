@@ -19,11 +19,9 @@ public class MainMariMencoba {
         Restoran[] restoran = new Restoran[n];
 
         MasakanIndonesia[] masakanIndonesia = new MasakanIndonesia[m1];
-        BahanMasakan[] bahanMasakanLokal = new BahanMasakan[m1];
         BahanIkan[] bahanIkanLokal = new BahanIkan[m1];
 
         MasakanAsing[] masakanAsing = new MasakanAsing[m2];
-        BahanMasakan[] bahanMasakanAsing = new BahanMasakan[m2];
         BahanIkan[] bahanIkanAsing = new BahanIkan[m2];
 
         //masukan
@@ -32,10 +30,10 @@ public class MainMariMencoba {
             String namaPemilik = null, noIjin = null, deskripsi = null, kota = null;
             System.out.println("Masukan data industri kuliner (noIjin, namaPemiliki, kota, deskripsi):");
             try {
-                namaPemilik = scan.next();
                 noIjin = scan.next();
-                deskripsi = scan.next();
+                namaPemilik = scan.next();
                 kota = scan.next();
+                deskripsi = scan.next();
 
                 //memasukan data ke dalam object
                 industriKuliner[i] = new IndustriKuliner();
@@ -57,6 +55,8 @@ public class MainMariMencoba {
                 pengusahaRestoran[i] = new PengusahaRestoran();
                 pengusahaRestoran[i].setNamaRestoran(namaRestoran);
                 pengusahaRestoran[i].setKodeRestoran(kodeRestoran);
+                pengusahaRestoran[i].setNamaPemilik(industriKuliner[i].getNamaPemilik());
+                pengusahaRestoran[i].setKota(industriKuliner[i].getKota());
             }catch (Exception e){}
 
 
@@ -69,6 +69,7 @@ public class MainMariMencoba {
 
                 //memasukan data input ke dalam object
                 restoran[i] = new Restoran();
+                restoran[i].setNamaRestoran(pengusahaRestoran[i].getNamaRestoran());
                 restoran[i].setJenisRestoran(jenis);
                 restoran[i].setPangsaPasar(pangsaPasar);
             }catch (Exception e){}
@@ -80,13 +81,13 @@ public class MainMariMencoba {
             }catch (Exception e){}
 
             masakanIndonesia = new MasakanIndonesia[m1];
-            bahanMasakanLokal = new BahanMasakan[m1];
             bahanIkanLokal = new BahanIkan[m1];
 
             //masukan user
             for (j = 0; j < m1; j++) {
                 String kodeLokal = null, namaLokal = null, hargaLokal = null, kodeBahanLokal = null, bahanLokal = null, deskripsiBahanLokal = null;
                 try {
+                    System.out.println("Masukan kode, nama, harga, kode baha, bahan, dan deskripsi masakan lokal:");
                     kodeLokal = scan.next();
                     namaLokal = scan.next();
                     hargaLokal = scan.next();
@@ -120,12 +121,12 @@ public class MainMariMencoba {
             }catch (Exception e){}
 
             masakanAsing = new MasakanAsing[m2];
-            bahanMasakanAsing = new BahanMasakan[m2];
             bahanIkanAsing = new BahanIkan[m2];
 
-            for (k = m1; k < m1+m2; k++) {
+            for (k = 0; k < m2; k++) {
                 String kodeAsing = null, namaAsing = null, hargaAsing = null, kodeBahanAsing = null, bahanAsing = null, deskripsiBahanAsing = null;
                 try {
+                    System.out.println("Masukan kode, nama, harga, kode baha, bahan, dan deskripsi masakan asing:");
                     kodeAsing = scan.next();
                     namaAsing = scan.next();
                     hargaAsing = scan.next();
@@ -133,20 +134,20 @@ public class MainMariMencoba {
                     bahanAsing = scan.next();
                     deskripsiBahanAsing = scan.next();
 
-                    masakanAsing[j] = new MasakanAsing();
-                    masakanAsing[j].setKodeMasakan(kodeAsing);
-                    masakanAsing[j].setNama(namaAsing);
-                    masakanAsing[j].setHarga(hargaAsing);
-                    masakanAsing[j].setKodeBahan(kodeBahanAsing);
-                    masakanAsing[j].setNamaBahan(bahanAsing);
-                    masakanAsing[j].setDeskripsi(deskripsiBahanAsing);
+                    masakanAsing[k] = new MasakanAsing();
+                    masakanAsing[k].setKodeMasakan(kodeAsing);
+                    masakanAsing[k].setNama(namaAsing);
+                    masakanAsing[k].setHarga(hargaAsing);
+                    masakanAsing[k].setKodeBahan(kodeBahanAsing);
+                    masakanAsing[k].setNamaBahan(bahanAsing);
+                    masakanAsing[k].setDeskripsi(deskripsiBahanAsing);
 
                     //jika bahan berupa ikan
                     if (bahanAsing.equalsIgnoreCase("Ikan")){
                         String jenisIkan;
                         jenisIkan = scan.next();
-                        bahanIkanAsing[j] = new BahanIkan();
-                        bahanIkanAsing[j].setJenisIkan(jenisIkan);
+                        bahanIkanAsing[k] = new BahanIkan();
+                        bahanIkanAsing[k].setJenisIkan(jenisIkan);
                     }
                 }catch (Exception e){}
             }
@@ -175,7 +176,7 @@ public class MainMariMencoba {
             System.out.println();
 
             //print masakan lokal/indonesia
-            System.out.println("Masakan Indonesia");
+            System.out.println("Daftar Masakan Indonesia");
             for (j = 0; j < m1; j++) {
                 System.out.println("Kode Masakan : "+masakanIndonesia[j].getKodeMasakan());
                 System.out.println("Nama Masakan : "+masakanIndonesia[j].getNama());
@@ -190,9 +191,8 @@ public class MainMariMencoba {
             }
 
             //print masakan asing
-            System.out.println();
             System.out.println("Daftar Masakan Asing:");
-            for (k = m1; k < m1+m2; k++) {
+            for (k = 0; k < m2; k++) {
                 System.out.println("Kode Masakan : "+masakanAsing[k].getKodeMasakan());
                 System.out.println("Nama Masakan : "+masakanAsing[k].getNama());
                 System.out.println("Harga Masakan : "+masakanAsing[k].getHarga());

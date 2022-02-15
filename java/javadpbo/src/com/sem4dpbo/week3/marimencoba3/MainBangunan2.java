@@ -1,8 +1,6 @@
 package com.sem4dpbo.week3.marimencoba3;
 
-import com.sem4dpbo.week3.marimencoba2.Genteng;
-
-public class MainBangunan {
+public class MainBangunan2 {
     public static void main(String[] args) {
         Arsitek dataArsitek = new Arsitek();     // intansiasi class arsitek
 
@@ -16,12 +14,13 @@ public class MainBangunan {
 
         //memasukan data ke dalam objcet dataPenjual memakai inheritance
 
-        PenjualBahanBangunan dataPenjual = new PenjualBahanBangunan();       //instansiasi class penjual bahan Bangunan
-        dataPenjual.setKodeToko("TK01");
-        dataPenjual.setNamaToko("PD Sumber Makmur");
-        dataPenjual.setAlamatToko("Jalan Setiabudi");
-        dataPenjual.setNamaPenjual("Hj. Asep");
-        dataPenjual.setNoKtp("3204280012");
+        Manusia dataManusia = new Manusia();       //instansiasi class penjual bahan Bangunan
+        dataManusia.setKodeToko("TK01");
+        dataManusia.setNamaToko("PD Sumber Makmur");
+        dataManusia.setAlamatToko("Jalan Setiabudi");
+        dataManusia.setNoKtp("3204280012");
+        dataManusia.setNamaPenjual("Hj. Asep");
+        dataManusia.setTelepon("08122319288");
 
         Semen dataSemen = new Semen();
         dataSemen.setKodeBahan("SMN01");
@@ -44,17 +43,18 @@ public class MainBangunan {
         System.out.println("---------------");
         System.out.println("Toko Bangunan");
         System.out.println("---------------");
-        System.out.println("Kode Toko: "+dataPenjual.getKodeToko());
-        System.out.println("Nama Toko: "+dataPenjual.getNamaToko());
-        System.out.println("Alamat Toko: "+dataPenjual.getAlamatToko());
+        System.out.println("Kode Toko: "+dataManusia.getKodeToko());
+        System.out.println("Nama Toko: "+dataManusia.getNamaToko());
+        System.out.println("Alamat Toko: "+dataManusia.getAlamatToko());
         System.out.println("---------------");
         System.out.println("Penjual Bahan Bangunan");
         System.out.println("---------------");
-        System.out.println("Kode Toko: "+dataPenjual.getKodeToko());
-        System.out.println("Nama Toko: "+dataPenjual.getNamaToko());
-        System.out.println("Alamat Toko: "+dataPenjual.getAlamatToko());
-        System.out.println("Nama Penjual: "+dataPenjual.getNamaPenjual());
-        System.out.println("No KTP: "+dataPenjual.getNoKtp());
+        System.out.println("Kode Toko: "+dataManusia.getKodeToko());
+        System.out.println("Nama Toko: "+dataManusia.getNamaToko());
+        System.out.println("Alamat Toko: "+dataManusia.getAlamatToko());
+        System.out.println("No KTP: "+dataManusia.getNoKtp());
+        System.out.println("Nama Penjual: "+dataManusia.getNamaPenjual());
+        System.out.println("No Telepon: "+dataManusia.getTelepon());
         System.out.println("---------------");
         System.out.println("Bahan Bangunan");
         System.out.println("---------------");

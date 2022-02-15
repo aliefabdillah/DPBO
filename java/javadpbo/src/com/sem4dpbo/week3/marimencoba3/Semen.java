@@ -1,6 +1,6 @@
-package com.sem4dpbo.week3.marimencoba2;
+package com.sem4dpbo.week3.marimencoba3;
 
-public class Semen extends BahanBangunan{
+public class Semen extends BahanBangunan {
     private String namaSemen, kodePabrik, kualitas, harga;
 
 //    constructor

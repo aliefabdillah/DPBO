@@ -1,6 +1,6 @@
-package com.sem4dpbo.week3.marimencoba2;
+package com.sem4dpbo.week3.marimencoba3;
 
-public class PenjualBahanBangunan extends TokoBangunan{
+public class PenjualBahanBangunan extends TokoBangunan {
     private String noKtp, namaPenjual;
 
 //    constructor

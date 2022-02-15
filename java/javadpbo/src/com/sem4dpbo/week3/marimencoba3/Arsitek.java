@@ -1,4 +1,4 @@
-package com.sem4dpbo.week3.marimencoba2;
+package com.sem4dpbo.week3.marimencoba3;
 
 //inidividual class
 public class Arsitek {

@@ -1,6 +1,6 @@
 package com.sem4dpbo.week2.marimencoba;
 
-public class Restoran extends PengusahaRestoran{
+public class Restoran extends IndustriKuliner{
     private String jenisRestoran, pangsaPasar;
 
 //    constructor

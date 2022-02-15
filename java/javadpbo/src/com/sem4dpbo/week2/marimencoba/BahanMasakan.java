@@ -1,7 +1,7 @@
 package com.sem4dpbo.week2.marimencoba;
 
 public class BahanMasakan{
-    private String kodeBahan, namaBahan, deskripsi;
+    private String kodeBahan, namaBahan, detailBahan, deskripsi;
 
 //    constructor
     public BahanMasakan(){}
@@ -20,6 +20,10 @@ public class BahanMasakan{
         this.deskripsi = deskripsi;
     }
 
+    public void setDetailBahan(String detailBahan) {
+        this.detailBahan = detailBahan;
+    }
+
         //get mtehod
     public String getKodeBahan() {
         return kodeBahan;
@@ -31,5 +35,9 @@ public class BahanMasakan{
 
     public String getDeskripsi() {
         return deskripsi;
+    }
+
+    public String getDetailBahan() {
+        return detailBahan;
     }
 }

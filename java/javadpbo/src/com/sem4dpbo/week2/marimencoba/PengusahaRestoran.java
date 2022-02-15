@@ -1,7 +1,7 @@
 package com.sem4dpbo.week2.marimencoba;
 
-public class PengusahaRestoran extends IndustriKuliner{
-    private String namaRestoran, kodeRestoran;
+public class PengusahaRestoran{
+    private String kodePengusaha, namaRestoran, kotaPengusaha, kodeRestoran;
 
 //    constructor
     public PengusahaRestoran(){}
@@ -23,5 +23,21 @@ public class PengusahaRestoran extends IndustriKuliner{
 
     public String getNamaRestoran() {
         return namaRestoran;
+    }
+
+    public String getKotaPengusaha() {
+        return kotaPengusaha;
+    }
+
+    public void setKotaPengusaha(String kotaPengusaha) {
+        this.kotaPengusaha = kotaPengusaha;
+    }
+
+    public String getKodePengusaha() {
+        return kodePengusaha;
+    }
+
+    public void setKodePengusaha(String kodePengusaha) {
+        this.kodePengusaha = kodePengusaha;
     }
 }

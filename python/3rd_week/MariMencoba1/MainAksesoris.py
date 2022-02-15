@@ -1,89 +1,73 @@
-# from Aksesoris import Aksesoris
-from AksesorisHandmade import AksesorisHandmade
-# from AksesorisPabrikan import AksesorisPabrikan
-# from IndustriKreatif import IndustriKreatif
+from turtle import pen
+from Aksesoris import Aksesoris
+from IndustriKreatif import IndustriKreatif
 from PengusahaAksesoris import PengusahaAksesoris
 from BahanAksesoris import BahanAksesoris
-from Kain import Kain
 
 
 # instansiasi class aksesoris
-aks = AksesorisHandmade()
+aks = Aksesoris()
 
-# modifikasi data di class aksesoris handmade menggunakan method yang ada di class aksesoris
-aks.setKodeAksesoris("001H")        #H untuk Handmade 
+# modifikasi data menggunakan method yang ada di class aksesoris
+aks.setKodeAksesoris("001")        
 aks.setJenis("Pakaian")
+aks.setKodeBahan("bhn01")
+aks.setHarga("RP.50000")
+aks.setPengelompokan("Handmade")            #pengelompokan berdasarkan pembuatan
 aks.setPangsaPasar("Orang Tua")
-
-# modifikasi atribut class AksesorisHandMade
-aks.setKodeBahanHandmade("101")
-aks.setHargaHandmade("RP.50000")
 
 # instansiasi class bahan menggunakan class BahanAksesoris
 bahan = BahanAksesoris()
-bahan.setKodeBahanHandmade(aks.getKodeBahanHandmade())
+bahan.setKode("bhn01")
 bahan.setNama("Kain")
+bahan.setDetilBahan("Katun")                #class kain di masukan ke dalam class bahan dalam bentuk atribut
 bahan.setDeskripsi("Kain untuk Pakaian")
-# jika bahan kain
-if bahan.getNama() == "Kain":
-    # buat object kain dari class Kain
-    kain = Kain("Katun", "Katun untuk membuat Pakaian")
-    kain.setKodeBahanHandmade(bahan.getKodeBahanHandmade())
-    kain.setNama(bahan.getNama())
 
 # intansiasi data class Industri Kreatif menggunakan class PengusahanAksesoris
-industri = PengusahaAksesoris()
+industri = IndustriKreatif()
 industri.setNoIjin("01")
 industri.setNamaPemilik("Dina")
 industri.setKota("Bandung")
 industri.setDeskripsiIndustri("Industri bergerak di bidang Pakaian")
 
 # memasukan data ke dalam atribut pengusaha aksesoris 
-industri.setKodePengusaha("111")
-industri.setKodeAksesoris(aks.getKodeAksesoris())
-
+pengusaha = PengusahaAksesoris()
+pengusaha.setKodePengusaha("111")
+pengusaha.setNamaPengusaha("Alief")
+pengusaha.setKotaPengusaha("Bandung")
+pengusaha.setKodeAksesoris("001")
 
 # print data 1
 print("Data ke-1")
 print("Aksesoris:")
 print("--------------")
-print(f"Kode: {str(aks.getKodeAksesoris())}")
-print(f"Jenis: {str(aks.getJenis())}")
-print(f"Pangsa Pasar: {str(aks.getPangsaPasar())}")
-print("--------------")
-print("Aksesoris Handmade:")
-print("--------------")
-print(f"Kode: {str(aks.getKodeAksesoris())}")
-print(f"Kode Bahan: {str(aks.getKodeBahanHandmade())}")
-print(f"Harga: {str(aks.getHargaHandmade())}")
+print(f"Kode         : {str(aks.getKodeAksesoris())}")
+print(f"Jenis        : {str(aks.getJenis())}")
+print(f"Harga        : {str(aks.getHarga())}")
+print(f"Kode Bahan   : {str(aks.getKodeBahan())}")
+print(f"Pengelompokan: {str(aks.getPengelompokan())}")
+print(f"Pangsa Pasar : {str(aks.getPangsaPasar())}")
 print("--------------")
 print("Bahan Aksesoris:")
 print("--------------")
-print(f"Kode Bahan: {str(bahan.getKodeBahanHandmade())}")
-print(f"Nama Bahan: {str(bahan.getNama())}")
-print(f"Deskripsi: {str(bahan.getDeskripsi())}")
-if bahan.getNama() == "Kain":
-    print("--------------")
-    print("Kain:")
-    print("--------------")
-    print(f"Kode Bahan: {str(kain.getKodeBahanHandmade())}")
-    print(f"Nama Bahan: {str(kain.getNama())}")
-    print(f"Jenis Serat: {str(kain.getJenisSerat())}")
-    print(f"Deskripsi: {str(kain.getDeskripsiKain())}")
+print(f"Kode Bahan : {str(bahan.getKodeBahan())}")
+print(f"Nama Bahan : {str(bahan.getNama())}")
+print(f"Detil Bahan: {str(bahan.getDetilBahan())}")
+print(f"Deskripsi  : {str(bahan.getDeskripsi())}")
 print("--------------")
 print("Industri Kreatif:")
 print("--------------")
-print(f"No. Ijin: {str(industri.getNoijin())}")
+print(f"No. Ijin    : {str(industri.getNoijin())}")
 print(f"Nama Pemilik: {str(industri.getNamaPemiliki())}")
-print(f"Kota: {str(industri.getKota())}")
-print(f"Deskripsi: {str(industri.getDeskripsiIndustri())}")
+print(f"Kota        : {str(industri.getKota())}")
+print(f"Deskripsi   : {str(industri.getDeskripsiIndustri())}")
 print("--------------")
 print("Pengusaha Aksesoris:")
 print("--------------")
-print(f"Kode Pengusaha: {str(industri.getKodePengusaha())}")
-print(f"Nama Pemilik: {str(industri.getNamaPemiliki())}")
-print(f"Kota: {str(industri.getKota())}")
-print(f"Kode Aksesoris: {str(industri.getKodeAksesoris())}")
+print(f"Kode Pengusaha: {str(pengusaha.getKodePengusaha())}")
+print(f"Nama Pengusaha: {str(pengusaha.getNamaPengusaha())}")
+print(f"Kota          : {str(pengusaha.getKotaPengusaha())}")
+print(f"Kode Aksesoris: {str(pengusaha.getKodeAksesoris())}")
 
 
 

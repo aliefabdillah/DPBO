@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-// #include "Manusia.cpp"
+#include "Manusia.cpp"
 using namespace std;
 
 class Karyawan : public Manusia

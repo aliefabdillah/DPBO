@@ -18,7 +18,7 @@ public class Pengusaha {
         this.nomorUsaha = nomorUsaha;
     }
 
-    public void setNama(String nama) {
+    public void setNamaPengusaha(String nama) {
         this.nama = nama;
     }
 

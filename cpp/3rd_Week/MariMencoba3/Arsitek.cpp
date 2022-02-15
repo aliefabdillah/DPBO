@@ -1,12 +1,8 @@
-#include <iostream>
-#include <string>
+#include "Manusia.cpp"
 
-using namespace std;
-
-//inidividual class
-class Arsitek {
+class Arsitek: public Manusia{
     private:
-        string kodeArsitek, namaArsitek, kantor, tahunBekerja;
+        string kodeArsitek, kantor, tahunBekerja;
 
 //    constructor
     public:
@@ -16,10 +12,6 @@ class Arsitek {
             //set method
         void setKodeArsitek(string kodeArsitek) {
             this->kodeArsitek = kodeArsitek;
-        }
-
-        void setNamaArsitek(string namaArsitek) {
-            this->namaArsitek = namaArsitek;
         }
 
         void setKantor(string kantor) {
@@ -33,10 +25,6 @@ class Arsitek {
             //get method
         string getKodeArsitek() {
             return kodeArsitek;
-        }
-
-        string getNamaArsitek() {
-            return namaArsitek;
         }
 
         string getKantor() {

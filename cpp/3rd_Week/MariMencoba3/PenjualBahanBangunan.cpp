@@ -1,23 +1,28 @@
 #include "Manusia.cpp"
-#include "TokoBangunan.cpp"
 
-using namespace std;
-
-class PenjualBahanBangunan: public Manusia, public TokoBangunan {
+class PenjualBahanBangunan: public Manusia {
     private:
-        string namaPenjual;
+        string namaToko, alamatToko;
 
 //    constructor
     public:
         PenjualBahanBangunan(){}
 
     //    set and get method
-        string getNamaPenjual() {
-            return namaPenjual;
+        string getNamaToko() {
+            return namaToko;
         }
 
-        void setNamaPenjual(string namaPenjual) {
-            this->namaPenjual = namaPenjual;
+        void setNamaToko(string namaToko) {
+            this->namaToko = namaToko;
+        }
+
+        string getAlamatToko(){
+            return alamatToko;
+        }
+
+        void setAlamatToko(string alamatToko){
+            this->alamatToko = alamatToko;
         }
 
         ~PenjualBahanBangunan(){};

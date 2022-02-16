@@ -52,7 +52,6 @@ public class MainProduct {
             System.out.println("------------------------------------------");
         }
 
-        dataProduct3[0].setIdProduct("111");
 //        print data pada object
         for (i = 0; i < n; i++) {
             System.out.println("=============================================");

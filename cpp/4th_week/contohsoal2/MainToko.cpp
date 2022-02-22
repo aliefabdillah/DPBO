@@ -6,9 +6,6 @@ int main(int argc, char const *argv[])
     string cari;
     PenjualBahanBangunan penjual[3];
     
-    // penjual[0].setnoKtp("001");
-    // penjual[0].setNama("Ida Jubaedah");
-    // penjual[0].setBanyakToko(2);
     penjual[0] = PenjualBahanBangunan("001", "Ida Jubaedah", 2);
     penjual[0].setToko(TokoBangunan("t001", "Sejahtera Abadi", "Parompong Ngamprah"), 0);
     penjual[0].setToko(TokoBangunan("t002", "Bahagia Abadi", "Lembang"), 1);

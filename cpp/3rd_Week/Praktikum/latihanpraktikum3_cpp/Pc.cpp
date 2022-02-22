@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
-// #include "Processor.cpp"
-// #include "Disk.cpp"
-// #include "Ram.cpp"
+#include "Processor.cpp"
+#include "Disk.cpp"
+#include "Ram.cpp"
 
 class Pc
 {

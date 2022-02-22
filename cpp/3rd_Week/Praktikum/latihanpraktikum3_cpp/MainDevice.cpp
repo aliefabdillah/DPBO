@@ -3,9 +3,6 @@
 
 using namespace std;
 
-// #include "Processor.cpp"
-// #include "Disk.cpp"
-// #include "Ram.cpp"
 #include "Pc.cpp"
 
 int main()

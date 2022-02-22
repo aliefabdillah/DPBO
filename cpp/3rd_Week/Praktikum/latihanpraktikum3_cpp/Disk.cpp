@@ -10,6 +10,7 @@ private:
     string type, diskCapacity;
     long diskPrice;
 public:
+// contructor
     Disk() {}
     Disk(string type, string capacity, long diskPrice){
         this->type = type;
@@ -17,6 +18,7 @@ public:
         this->diskPrice = diskPrice;
     }
 
+    // set and get atribut
     void setType(string t){ this->type = t; }
     void setDiskCapacity(string c){ this->diskCapacity = c; }
     void setDiskPrice(long p){ this->diskPrice = p; }

@@ -18,6 +18,7 @@ class Pc{
     {
     }
 
+    // set and get function setiap atribut
     function setProcObj($paramProcObj){
         $this->procObj = $paramProcObj;
     }

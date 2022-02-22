@@ -14,6 +14,7 @@ private:
     long totalPrice;
 
 public:
+// contructor
     Pc() {}
     Pc(Processor p, Disk d, Ram r) {
         this->procObj = p;
@@ -22,15 +23,15 @@ public:
         // this->totalPrice = total;
     }
 
+// set and get atribut
     void setProcObj(Processor p){ this->procObj = p; }
     void setDiskObj(Disk d){ this->diskObj = d; }
     void setRamObj(Ram r){ this->ramObj = r; }
-    // void setTotalPrice(long total){ this->totalPrice = total; }
-
+    
     Processor getProcObj(){ return this->procObj; }
     Disk getDiskObj(){ return this->diskObj; }
     Ram getRamObj(){ return this->ramObj; }
-    // long getTotalPrice(){ return this->totalPrice; }
+    
 
     // method
     void countTotal(){

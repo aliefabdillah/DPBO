@@ -10,12 +10,14 @@ private:
     string name;
     long procPrice;
 public:
+    //contrutor
     Processor() {}
     Processor(string name, long price) {
         this->name = name;
         this->procPrice = price;
     }
 
+    // set and get atribut
     void setName(string n){ this->name = n; }
     void setProcPrice(long p){ this->procPrice = p; }
     

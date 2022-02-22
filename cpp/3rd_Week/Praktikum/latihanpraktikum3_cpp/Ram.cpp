@@ -10,12 +10,14 @@ private:
     string ramCapacity;
     long ramPrice;
 public:
+// contructor
     Ram() {}
     Ram(string capacity, long price) {
         this->ramCapacity = capacity;
         this->ramPrice = price;
     }
 
+// set and get atribut
     void setRamCapacity(string c){ this->ramCapacity = c; }
     void setRamPrice(long p){ this->ramPrice = p; }
 

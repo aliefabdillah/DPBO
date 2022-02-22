@@ -15,6 +15,7 @@ class Pc:
     def __init__(self):
         pass
     
+    # setter atribut
     def setProcObj(self, procObj):
         self.procObj = procObj
     
@@ -24,6 +25,7 @@ class Pc:
     def setRamObj(self, ramObj):
         self.ramObj = ramObj
     
+    # getter atribut
     def getProcObj(self):
         return self.procObj
     
@@ -33,9 +35,11 @@ class Pc:
     def gerRamObj(self):
         return self.ramObj
     
+    # method menghitung total harga
     def countTotal(self):
         self.totalPrice = self.procObj.getProcPrice() + self.diskObj.getDiskPrice() + self.ramObj.getRamPrice()
     
+    # method print data pc
     def printPc(self):
         self.procObj.printProc()
         self.diskObj.printDisk()

@@ -24,22 +24,22 @@ int main(int argc, char const *argv[])
         penjual[i].cetakPenjual();
     }
 
-    // // meminta masukan nama toko yang ingin di cari
-    // cout << "Masukan Nama toko yang dicari: ";
-    // cin >> cari;
+    // meminta masukan nama toko yang ingin di cari
+    cout << "Masukan Nama toko yang dicari: ";
+    cin >> cari;
 
-    // // menampilkan hasil pencarian
-    // cout << "Hasil Pencarian : " << endl;
+    // menampilkan hasil pencarian
+    cout << "Hasil Pencarian : " << endl;
 
-    // for (int i = 0; i < sizeof(penjual)/sizeof(penjual[0]); i++)
-    // {
-    //     for (int j = 0; j < sizeof(penjual[i].getToko()); j++) 
-    //     {
-    //         string kalimat = penjual[i].getToko().getNamaToko();
-    //         if (strstr(kalimat == cari)){
-    //             penjual[i].cetakPenjualToko(j);
-    //         }
-    //     }
-    // }
+    for (int i = 0; i < sizeof(penjual)/sizeof(penjual[0]); i++)
+    {
+        for (int j = 0; j < sizeof(penjual[i].getToko())/sizeof(penjual[0].getToko()); j++) 
+        {
+            if (penjual[i].getToko().getNamaToko().find(cari) != 0)
+            {
+                penjual[i].cetakPenjualToko(j);
+            }
+        }
+    }
     return 0;
 }

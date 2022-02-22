@@ -6,7 +6,7 @@ private:
     /* data */
     string noKtp, nama;
     int banyakToko;
-    TokoBangunan toko[50];
+    static TokoBangunan toko[10];
 public:
     PenjualBahanBangunan() {}
     PenjualBahanBangunan(string noKtp, string nama, int banyakToko) {
@@ -45,7 +45,7 @@ public:
 
 //   get and set Toko
     TokoBangunan getToko() {
-        return toko[banyakToko];
+        return this->toko[banyakToko];
     }
 
     void setToko(TokoBangunan toko, int nomorToko) {

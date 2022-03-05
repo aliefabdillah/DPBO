@@ -1,9 +1,29 @@
+from Vehicle import Vehicle
 from Ship import Ship
 from Airplane import Airplane
 
 def main():
-    # instantiation ship data
+    # instantiation vehicle data
     print("=================")
+    print("Vehicle Data:")
+    print("=================")
+    dataVehicle = [Vehicle() for i in range(5)]
+
+    # input vehicle data
+    dataVehicle[0].setFuelType("Biodiesel") , dataVehicle[0].setMaxPassanger(100)
+    dataVehicle[1].setFuelType("Biosolar") , dataVehicle[1].setMaxPassanger(40)
+    dataVehicle[2].setFuelType("Avtur") , dataVehicle[2].setMaxPassanger(150)
+    dataVehicle[3].setFuelType("Low-Sulfur") , dataVehicle[3].setMaxPassanger(80)
+    dataVehicle[4].setFuelType("Coal") , dataVehicle[4].setMaxPassanger(500)
+
+    # print vehicle data
+    i = 0
+    for i in range(5):
+        dataVehicle[i].printDataVehicle()
+
+
+    # instantiation ship data
+    print("\n=================")
     print("Ship Data:")
     print("=================")
     dataShip = [Ship() for i in range(5)]

@@ -1,3 +1,9 @@
+""" 
+Janji: Saya Alief Muhammad Abdillah 2003623 mengerjakan Kuis 1  dalam mata kuliah Desain Pemrogaman
+Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
+Aamiin 
+"""
+
 from Penduduk import Penduduk
 from PemilikTengkulak import PemilikTengkulak
 from Komoditas import Komoditas

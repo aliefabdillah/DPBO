@@ -1,3 +1,9 @@
+""" 
+Janji: Saya Alief Muhammad Abdillah 2003623 mengerjakan Kuis 1 dalam mata kuliah Desain Pemrogaman
+Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
+Aamiin 
+"""
+
 class MarketPlace:
     # implementasi class Marketplace
 
@@ -23,6 +29,7 @@ class MarketPlace:
         else:
             self.tipeMarketBussines = "Bussines to Customer"
     
+    # getter method
     def getIdMarketPlace(self):
         return self.idMarketPlace
     
@@ -35,6 +42,7 @@ class MarketPlace:
     def getTipeMarketBussines(self):
         return self.tipeMarketBussines
     
+    # print method data marketplace
     def printDataMarketPlace(self):
         print(f"id MarketPlace : {self.getIdMarketPlace()}")
         print(f"Nama Marketplace : {self.getNamaMarketPlace()}")

@@ -1,3 +1,9 @@
+""" 
+Janji: Saya Alief Muhammad Abdillah 2003623 mengerjakan Kuis 1 dalam mata kuliah Desain Pemrogaman
+Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
+Aamiin 
+"""
+
 from Petani import Petani
 from PemilikTengkulak import PemilikTengkulak
 from Komoditas import Komoditas
@@ -66,6 +72,7 @@ def main():
     inputName = input("\ninput nama petani : ")
     sign = 0
     for i in range(2):
+        # jika input sama dengan nama petani
         if inputName == dataPetani[i].getNama():
             print("==========================")
             print(f"Data Petani yang dicari: ")
@@ -75,6 +82,7 @@ def main():
             dataLahan[i].printDataLahan()
             sign = 1
     
+    # jika input nama tidak sesuai
     if sign == 0:
         print(f"Nama Petani Tidak Ditemukan")
 

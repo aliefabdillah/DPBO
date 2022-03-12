@@ -1,3 +1,8 @@
+""" 
+Janji: Saya Alief Muhammad Abdillah 2003623 mengerjakan Kuis 1 dalam mata kuliah Desain Pemrogaman
+Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan.
+Aamiin 
+"""
 class Penduduk:
     # implementasi Class penduduk
 
@@ -22,7 +27,8 @@ class Penduduk:
 
     def getAlamat(self):
         return self.alamat
-
+    
+    # print data penduduk
     def printDataPenduduk(self):
         print(f"Id Penduduk: {self.getIdPenduduk()}")
         print(f"Nama: {self.getNama()}")
